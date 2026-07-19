@@ -262,7 +262,7 @@ NodoArma* leerArmas(const string& ruta) {
         getline(archivo, arm.tipo);
         if (!arm.tipo.empty() && arm.tipo.back() == '\r') arm.tipo.pop_back();
         arm.damage = extraerValor(archivo);
-        extraerValor(archivo); // valor intermedio del archivo (no usado por Arma), se descarta para no desfasar la lectura
+        extraerValor(archivo); 
         arm.peso   = extraerValor(archivo);
         insertarArma(cabeza, arm);
     }
